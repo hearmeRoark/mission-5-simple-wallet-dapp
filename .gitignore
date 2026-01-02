@@ -1,0 +1,14 @@
+# node
+node_modules
+.env
+
+# hardhat
+cache
+artifacts
+
+# react
+simple-wallet-frontend/node_modules
+simple-wallet-frontend/build
+
+# OS
+.DS_Store
