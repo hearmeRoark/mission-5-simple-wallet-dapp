@@ -1,13 +1,67 @@
-# Sample Hardhat Project
+# Mission 5 — Simple Wallet dApp
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+A full-stack Ethereum dApp built with **Solidity**, **Hardhat**, **React**, and **ethers.js**.
 
-Try running some of the following tasks:
+This project demonstrates:
+- Smart contract development
+- Local blockchain deployment with Hardhat
+- React frontend integration
+- MetaMask wallet connection
+- Read/write contract interactions
+- Owner-only access control
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
+---
+
+## 🧱 Smart Contract
+
+**SimpleWallet.sol** features:
+
+- Accept ETH deposits
+- Track contract balance
+- Owner-only withdrawals
+- Revert on unauthorized access
+
+### Core Functions
+- `deposit()` — payable ETH deposit
+- `getBalance()` — returns contract balance
+- `withdraw(uint256 amount)` — owner-only withdrawal
+
+---
+
+## 🖥️ Frontend (React)
+
+The React app allows users to:
+
+- Connect MetaMask
+- Detect active network
+- View connected address
+- Deposit ETH into the wallet
+- Read wallet balance
+- Withdraw ETH (owner only)
+
+Built with:
+- React
+- ethers.js
+- MetaMask
+
+---
+
+## 🧪 Local Development
+
+### Prerequisites
+- Node.js
+- MetaMask
+
+### Run locally
+
+```bash
+# 1. Start local Hardhat network
 npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+
+# 2. Deploy contract
+npx hardhat run scripts/deploy.js --network localhost
+
+# 3. Start frontend
+cd simple-wallet-frontend
+npm install
+npm start
